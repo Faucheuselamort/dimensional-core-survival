@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boss — Dimensional Core Survival</title>
+<meta name="description" content="Tous les boss du serveur et un ordre de progression conseillé : Twilight, Aether, Blue Skies, Cataclysm et plus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars"></div>
+
+<header class="site-head">
+  <nav class="nav">
+    <a class="brand" href="index.html"><span class="mark"><img src="logo.png" alt="Dimensional Core"></span><span>Dimensional Core Survival<small>1.19.2 Forge</small></span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span></button>
+    <div class="nav-links" id="navlinks">
+      <a href="index.html">Accueil</a>
+      <a href="regles.html">Règles</a>
+      <a href="evenements.html">Événements</a>
+      <a href="dimensions.html">Dimensions</a>
+      <a href="boss.html" class="active">Boss</a>
+      <a href="minerais.html">Minerais</a>
+      <a href="faq.html">FAQ</a>
+      <a class="discord" href="https://discord.gg/F83tMfH5z" target="_blank" rel="noopener">Discord</a>
+    </div>
+  </nav>
+</header>
+
+<div class="wrap section-pad">
+
+  <div class="page-title">
+    <div class="eyebrow">Hall des défis</div>
+    <h1>Les Boss</h1>
+    <p>Le serveur regorge de boss, du défi accessible au cauchemar de fin de jeu. Voici qui ils sont et un ordre de progression conseillé.</p>
+  </div>
+
+  <div class="order-note">
+    <h3>🧭 Ordre de progression conseillé</h3>
+    <p>Vanilla &amp; Twilight Forest pour démarrer → boss de dimensions (Aether, Blue Skies) → Mowzie's &amp; Bosses of Mass Destruction → Ice and Fire → puis, tout en haut de l'échelle, les boss de <b>Cataclysm</b> (prévus pour l'<i>après</i>-Dragon de l'End). Rien n'est imposé : explore à ton rythme et prépare ton équipement avant chaque palier.</p>
+  </div>
+
+  <div class="dim-grid" style="margin-top:22px">
+
+    <div class="dim-card" style="--accent:#3fd17a">
+      <span class="badge-dim">Vanilla+</span>
+      <h3>Boss de base</h3>
+      <ul class="boss-list">
+        <li><b>Ender Dragon</b><small>Dans l'End — la grande étape avant le contenu end-game.</small></li>
+        <li><b>Wither</b><small>Invoqué avec des têtes de wither + soul sand.</small></li>
+        <li><b>Warden</b><small>Ancient City — à réveiller (ou éviter) ; sa drop ouvre Deeper and Darker.</small></li>
+      </ul>
+    </div>
+
+    <div class="dim-card" style="--accent:#c084fc">
+      <span class="badge-dim">Twilight Forest</span>
+      <h3>Progression imposée</h3>
+      <p>À vaincre dans l'ordre : chaque boss débloque le suivant.</p>
+      <ul class="boss-list">
+        <li><b>1. Naga</b></li>
+        <li><b>2. Lich</b></li>
+        <li><b>3. Minoshroom</b></li>
+        <li><b>4. Hydra</b></li>
+        <li><b>5. Knight Phantoms</b></li>
+        <li><b>6. Ur-Ghast</b></li>
+        <li><b>7. Alpha Yeti</b> puis <b>Snow Queen</b></li>
+      </ul>
+    </div>
+
+    <div class="dim-card" style="--accent:#ffd84d">
+      <span class="badge-dim">The Aether</span>
+      <h3>Donjons célestes</h3>
+      <ul class="boss-list">
+        <li><b>Slider</b><small>Bronze Dungeon.</small></li>
+        <li><b>Valkyrie Queen</b><small>Silver Dungeon.</small></li>
+        <li><b>Sun Spirit</b><small>Gold Dungeon — met fin à l'éternel jour de l'Aether.</small></li>
+      </ul>
+    </div>
+
+    <div class="dim-card" style="--accent:#5bb8ff">
+      <span class="badge-dim">Blue Skies</span>
+      <h3>4 donjons à boss</h3>
+      <ul class="boss-list">
+        <li><b>Summoner</b><small>Everbright — Blinding Dungeon.</small></li>
+        <li><b>Starlit Crusher</b><small>Everbright — Nature Dungeon.</small></li>
+        <li><b>Alchemist</b><small>Everdawn — Blinding Dungeon.</small></li>
+        <li><b>Arachnarch</b> ⚠️<small>Everdawn — Poison Dungeon (araignée géante).</small></li>
+      </ul>
+    </div>
+
+    <div class="dim-card" style="--accent:#ff8c42">
+      <span class="badge-dim">Mowzie's Mobs</span>
+      <h3>Gardiens élémentaires</h3>
+      <ul class="boss-list">
+        <li><b>Ferrous Wroughtnaut</b><small>Dans sa chambre souterraine.</small></li>
+        <li><b>Frostmaw</b><small>Biomes enneigés/montagnes.</small></li>
+        <li><b>Barako, the Sun Chief</b><small>Sur son trône dans les savanes.</small></li>
+      </ul>
+    </div>
+
+    <div class="dim-card" style="--accent:#2dd4bf">
+      <span class="badge-dim">Bosses of Mass Destruction</span>
+      <h3>Quatre fléaux</h3>
+      <ul class="boss-list">
+        <li><b>Gauntlet</b></li>
+        <li><b>Void Blossom</b><small>Grottes luxuriantes.</small></li>
+        <li><b>Obsidilith</b><small>Îles de l'End.</small></li>
+        <li><b>Night Lich</b></li>
+      </ul>
+    </div>
+
+    <div class="dim-card" style="--accent:#ff5a3c">
+      <span class="badge-dim">Ice and Fire</span>
+      <h3>Dragons &amp; créatures</h3>
+      <ul class="boss-list">
+        <li><b>Dragons</b> de feu, de glace &amp; de foudre<small>Dans leurs antres remplis d'or — apprivoisables jeunes.</small></li>
+        <li><b>Cyclope</b><small>Grottes côtières.</small></li>
+        <li><b>Serpent de mer</b>, <b>Gorgone</b>, <b>Hydre</b></li>
+      </ul>
+    </div>
+
+    <div class="dim-card" style="--accent:#e0457b">
+      <span class="badge-dim">Cataclysm · End-game</span>
+      <h3>L'élite (après le Dragon)</h3>
+      <p>Boss extrêmement difficiles, pensés pour l'après-End.</p>
+      <ul class="boss-list">
+        <li><b>Netherite Monstrosity</b><small>Soul Forge (Nether).</small></li>
+        <li><b>Ender Guardian</b> &amp; <b>Ender Golem</b><small>Ruined Citadel (End).</small></li>
+        <li><b>The Harbinger</b><small>Ancient Factory.</small></li>
+        <li><b>Ignis</b><small>Burning Arena (Nether) — invoqué avec des Burning Ashes sur l'autel.</small></li>
+        <li><b>Ancient Remnant</b><small>Cursed Pyramid.</small></li>
+        <li><b>Maledictus</b> · <b>Scylla</b><small>Frosted Prison · Acropolis.</small></li>
+      </ul>
+      <div class="note" style="margin-top:14px">Ordre conseillé : Netherite Monstrosity → Ender Guardian → Harbinger → Ancient Remnant → Ignis.</div>
+    </div>
+
+    <div class="dim-card" style="--accent:#7c84ff">
+      <span class="badge-dim">Et aussi</span>
+      <h3>Plus de défis</h3>
+      <p>D'autres mods ajoutent des boss et mobs d'élite à croiser au fil de l'exploration : <b>Born in Chaos</b>, <b>Bossominium</b>, <b>Brutal Bosses</b> et <b>Dungeons Mobs</b>.</p>
+    </div>
+
+  </div>
+
+  <div class="note" style="--accent:var(--gold);margin-top:24px">
+    ⚠️ <b>Araignées / horreur :</b> certains boss et mobs peuvent être impressionnants. Tu peux réduire le contenu arachnophobie (Arphex / Nyf's Spiders) — voir la <a href="faq.html">FAQ</a>. Cette page est une première version : dis-nous sur le <a href="https://discord.gg/F83tMfH5z" target="_blank" rel="noopener">Discord</a> si un boss manque ou si l'ordre mérite d'être ajusté.
+  </div>
+
+</div>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="links">
+      <a href="index.html">Accueil</a><a href="regles.html">Règles</a><a href="evenements.html">Événements</a><a href="dimensions.html">Dimensions</a><a href="boss.html">Boss</a><a href="minerais.html">Minerais</a><a href="faq.html">FAQ</a><a class="discord" href="https://discord.gg/F83tMfH5z" target="_blank" rel="noopener">Discord</a>
+    </div>
+    <div class="small">Dimensional Core Survival · Serveur Minecraft moddé non officiel — non affilié à Mojang / Microsoft.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
