@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas des Minerais — Dimensional Core Survival</title>
+<meta name="description" content="Tous les minerais minables du serveur, classés par dimension : où chercher, dans quel biome, avec quelle pioche.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars"></div>
+
+<header class="site-head">
+  <nav class="nav">
+    <a class="brand" href="index.html"><span class="mark">DC</span><span>Dimensional Core<small>Survival · 1.19.2 Forge</small></span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span></button>
+    <div class="nav-links" id="navlinks">
+      <a href="index.html">Accueil</a>
+      <a href="dimensions.html">Dimensions</a>
+      <a href="minerais.html" class="active">Minerais</a>
+      <a href="faq.html">FAQ</a>
+      <a href="regles.html">Règles</a>
+      <a class="discord" href="https://discord.gg/F83tMfH5z" target="_blank" rel="noopener">Discord</a>
+    </div>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <div class="page-title">
+    <div class="eyebrow">Atlas des minerais</div>
+    <h1>Où miner quoi ?</h1>
+    <p>Tous les minerais minables du serveur, classés par dimension. Tape un nom pour filtrer.</p>
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+      <input id="q" type="text" placeholder="Rechercher un minerai (ex. ostrum, diopside…)" autocomplete="off">
+    </div>
+    <div class="count" id="count"></div>
+    <nav class="portals" id="portalnav"></nav>
+  </div>
+
+  <main>
+
+    <section class="dim" id="overworld" style="--accent:#3fd17a" data-name="Overworld">
+      <div class="dim-head"><h2>Overworld</h2><span class="tag">Surface · Grottes</span></div>
+      <p class="dim-desc">Le monde de départ. Minerais vanilla + quelques pépites des mods d'exploration.</p>
+      <div class="sub">Vanilla</div>
+      <div class="ores">
+        <div class="ore"><span class="nm">Charbon</span><span class="loc">Partout, surtout vers Y 96</span></div>
+        <div class="ore"><span class="nm">Fer</span><span class="loc">Profondeur + montagnes (Y 232)</span></div>
+        <div class="ore"><span class="nm">Cuivre</span><span class="loc">Grottes de stalactites, Y 48</span></div>
+        <div class="ore"><span class="nm">Or</span><span class="loc">Bas-fonds · Badlands en surface</span></div>
+        <div class="ore"><span class="nm">Redstone</span><span class="loc">Sous Y -32</span></div>
+        <div class="ore"><span class="nm">Lapis-lazuli</span><span class="loc">Autour de Y 0</span></div>
+        <div class="ore"><span class="nm">Diamant</span><span class="loc">Le plus bas possible, Y -59</span><span class="badge">Pioche fer+</span></div>
+        <div class="ore"><span class="nm">Émeraude</span><span class="loc">Biomes de montagne uniquement</span><span class="badge">Pioche fer+</span></div>
+      </div>
+      <div class="sub">Ajouts des mods</div>
+      <div class="ores">
+        <div class="ore"><span class="nm">Argent (Silver)</span><span class="loc">Occultism · en profondeur</span></div>
+        <div class="ore"><span class="nm">Pendorite</span><span class="loc">BYG · sous-biome Forest Fault, Y ≤ 56</span><span class="badge">Pioche netherite</span></div>
+        <div class="ore"><span class="nm">Ametrine</span><span class="loc">BYG · Shattered Viscal Isles, Y 180–228</span><span class="badge">Pioche diamant+</span></div>
+        <div class="ore"><span class="nm">Étain (Tin)</span><span class="loc">Energized Power · à confirmer en jeu</span></div>
+      </div>
+      <details class="cc">
+        <summary>Crystalcraft Unlimited — minerais de l'Overworld <span class="chev">›</span></summary>
+        <div class="cc-body">
+          <div class="sub">Métaux (à fondre au four)</div>
+          <div class="chips">
+            <span class="chip">Tin</span><span class="chip">Bronze</span><span class="chip">Silver</span><span class="chip">Nickel</span><span class="chip">Zinc</span><span class="chip">Lead</span><span class="chip">Tungsten</span><span class="chip">Aluminium</span><span class="chip">Chrome</span><span class="chip">Magnésium</span><span class="chip">Silicium</span><span class="chip">Americium</span><span class="chip">Lithium</span><span class="chip">Bismuth</span><span class="chip">Thorium</span><span class="chip">Indium</span><span class="chip">Scandium</span><span class="chip">Vanadium</span><span class="chip">Manganèse</span><span class="chip">Yttrium</span><span class="chip">Zirconium</span><span class="chip">Niobium</span><span class="chip">Molybdène</span><span class="chip">Technétium</span><span class="chip">Platine</span>
+          </div>
+          <div class="sub">Gemmes &amp; minéraux</div>
+          <div class="chips">
+            <span class="chip">Uranium</span><span class="chip">Titanium</span><span class="chip">Amazonite</span><span class="chip">Alexandrite</span><span class="chip">Amber</span><span class="chip">Amethyst</span><span class="chip">Ametrine</span><span class="chip">Aquamarine</span><span class="chip">Tourmaline</span><span class="chip">Citrine</span><span class="chip">Chrysolite</span><span class="chip">Fluorite</span><span class="chip">Garnet</span><span class="chip">Indigolite</span><span class="chip">Iolite</span><span class="chip">Jade</span><span class="chip">Jasper</span><span class="chip">Kunzite</span><span class="chip">Malachite</span><span class="chip">Opal</span><span class="chip">Peridot</span><span class="chip">Ruby</span><span class="chip">Sapphire</span><span class="chip">Spinel</span><span class="chip">Topaz</span><span class="chip">Onyx</span><span class="chip">Rose Quartz</span><span class="chip">Turquoise</span><span class="chip">+ variantes rares</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="dim" id="nether" style="--accent:#ff5a3c" data-name="Nether">
+      <div class="dim-head"><h2>Le Nether</h2><span class="tag">Dimension · Feu</span></div>
+      <p class="dim-desc">Portail en obsidienne. Chaud, hostile, et riche en ressources rares.</p>
+      <div class="ores">
+        <div class="ore"><span class="nm">Quartz du Nether</span><span class="loc">Partout dans le Nether</span></div>
+        <div class="ore"><span class="nm">Or du Nether</span><span class="loc">Roche du Nether</span></div>
+        <div class="ore"><span class="nm">Ancient Debris</span><span class="loc">Vanilla · Y 15 idéal</span><span class="badge">Pioche diamant+</span></div>
+        <div class="ore"><span class="nm">Iesnium</span><span class="loc">Occultism · veines dans le Nether</span></div>
+        <div class="ore"><span class="nm">Emeraldite</span><span class="loc">BYG · biome Wailing Garth (Scoria)</span></div>
+      </div>
+      <details class="cc">
+        <summary>Crystalcraft Unlimited — minerais du Nether <span class="chev">›</span></summary>
+        <div class="cc-body">
+          <div class="chips">
+            <span class="chip">Fire Opal</span><span class="chip">Catseye</span><span class="chip">Pyrite</span><span class="chip">Sulfur</span><span class="chip">Ghoul Quartz</span><span class="chip">Blood Quartz</span><span class="chip">Sunstone</span><span class="chip">Bloodstone</span><span class="chip">Yurium</span><span class="chip">Palladium</span><span class="chip">Humoranium</span><span class="chip">Bixbite</span><span class="chip">Red Diamond</span><span class="chip">Orange Diamond</span><span class="chip">Pink Diamond</span><span class="chip">Pelenium</span><span class="chip">Seaborgium</span><span class="chip">Soul Quartz</span><span class="chip">Meteorite Scraps</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="dim" id="end" style="--accent:#b07bff" data-name="The End">
+      <div class="dim-head"><h2>The End</h2><span class="tag">Dimension · Vide</span></div>
+      <p class="dim-desc">Aucun minerai vanilla ici — mais Crystalcraft y cache ses gemmes les plus exotiques.</p>
+      <div class="note">Pas de minerai natif côté vanilla. Tout ce qui se mine ici vient de Crystalcraft.</div>
+      <details class="cc">
+        <summary>Crystalcraft Unlimited — minerais de l'End <span class="chev">›</span></summary>
+        <div class="cc-body">
+          <div class="chips">
+            <span class="chip">Enderium</span><span class="chip">Rhodonite</span><span class="chip">Maradonyx</span><span class="chip">Moonstone</span><span class="chip">Serpentine</span><span class="chip">Larimar</span><span class="chip">White Diamond</span><span class="chip">Purple Diamond</span><span class="chip">Cyber Crystal</span><span class="chip">Xernium</span><span class="chip">Cobalt</span><span class="chip">Pearl</span><span class="chip">Orichalcum</span><span class="chip">Potassium</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="dim" id="aether" style="--accent:#ffd84d" data-name="The Aether">
+      <div class="dim-head"><h2>The Aether</h2><span class="tag">Dimension · Ciel</span></div>
+      <p class="dim-desc">Îles flottantes. Les minerais se cachent dans la Holystone.</p>
+      <div class="ores">
+        <div class="ore"><span class="nm">Ambrosium</span><span class="loc">Dans la Holystone · ≈ le charbon</span></div>
+        <div class="ore"><span class="nm">Zanite</span><span class="loc">Le plus courant · outils &amp; armures</span></div>
+        <div class="ore"><span class="nm">Gravitite</span><span class="loc">Rare · lévite si rien au-dessus</span></div>
+        <div class="ore"><span class="nm">Icestone</span><span class="loc">Bloc glacé des îles</span></div>
+      </div>
+      <div class="note">Si l'addon <b>Aether: Basic Ores</b> est actif, les minerais classiques génèrent aussi dans l'Aether.</div>
+    </section>
+
+    <section class="dim" id="undergarden" style="--accent:#2dd4bf" data-name="The Undergarden">
+      <div class="dim-head"><h2>The Undergarden</h2><span class="tag">Dimension · Souterrain</span></div>
+      <p class="dim-desc">Monde souterrain brumeux. Minerais dans la depthrock, la shiverstone et la tremblecrust.</p>
+      <div class="ores">
+        <div class="ore"><span class="nm">Cloggrum</span><span class="loc">Très courant en profondeur</span></div>
+        <div class="ore"><span class="nm">Froststeel</span><span class="loc">Effet de ralentissement sur les armes</span></div>
+        <div class="ore"><span class="nm">Utherium</span><span class="loc">Veines + variante Tremblecrust</span></div>
+        <div class="ore"><span class="nm">Regalium</span><span class="loc">Rare · « l'émeraude » de l'Undergarden</span></div>
+        <div class="ore"><span class="nm">Charbon / Fer / Or / Diamant</span><span class="loc">Variantes Undergarden</span></div>
+      </div>
+      <div class="note">Les variantes <b>Shiverstone</b> se trouvent dans le biome <b>Frostfields</b>.</div>
+    </section>
+
+    <section class="dim" id="blueskies" style="--accent:#5bb8ff" data-name="Blue Skies">
+      <div class="dim-head"><h2>Blue Skies</h2><span class="tag">Everbright &amp; Everdawn</span></div>
+      <p class="dim-desc">Everbright (glacial, lumineux) et Everdawn (sombre, chaud).</p>
+      <div class="sub">Dans les deux dimensions</div>
+      <div class="ores">
+        <div class="ore"><span class="nm">Pyrope</span><span class="loc">Gemme</span></div>
+        <div class="ore"><span class="nm">Aquite</span><span class="loc">Niveau fer (Raw Aquite à fondre)</span></div>
+        <div class="ore"><span class="nm">Diopside</span><span class="loc">Niveau diamant · Y 1–16, + courant Everbright</span><span class="badge">Pioche Blue Skies</span></div>
+        <div class="ore"><span class="nm">Charoite</span><span class="loc">Niveau diamant · Y 11 idéal, + courant Everdawn</span><span class="badge">Pioche Blue Skies</span></div>
+        <div class="ore"><span class="nm">Moonstone</span><span class="loc">Cristal lumineux</span></div>
+      </div>
+      <div class="sub">Everbright uniquement</div>
+      <div class="ores">
+        <div class="ore"><span class="nm">Ventium</span><span class="loc">Dimension glaciale</span></div>
+        <div class="ore"><span class="nm">Falsite</span><span class="loc">Dimension glaciale</span></div>
+      </div>
+      <div class="sub">Everdawn uniquement</div>
+      <div class="ores">
+        <div class="ore"><span class="nm">Horizonite</span><span class="loc">Dimension chaude</span></div>
+      </div>
+    </section>
+
+    <section class="dim" id="adastra" style="--accent:#7c84ff" data-name="Ad Astra">
+      <div class="dim-head"><h2>Ad Astra</h2><span class="tag">Espace · Planètes</span></div>
+      <p class="dim-desc">Chaque planète a ses ressources — pense à l'oxygène et à la combinaison adaptée !</p>
+      <div class="sub">🌑 Lune</div>
+      <div class="ores">
+        <div class="ore"><span class="nm">Desh</span><span class="loc">Ressource clé · fusée Tier 2</span></div>
+        <div class="ore"><span class="nm">Fer</span><span class="loc">Sous la surface lunaire</span></div>
+        <div class="ore"><span class="nm">Ice Shard</span><span class="loc">Pour le Cryo Fuel</span></div>
+        <div class="ore"><span class="nm">Cheese 🧀</span><span class="loc">Oui, du fromage</span></div>
+      </div>
+      <div class="sub">🔴 Mars</div>
+      <div class="ores">
+        <div class="ore"><span class="nm">Ostrum</span><span class="loc">Ressource clé · fusée Tier 3</span></div>
+        <div class="ore"><span class="nm">Fer</span><span class="loc">Cavernes martiennes</span></div>
+        <div class="ore"><span class="nm">Diamant</span><span class="loc">Sous la surface</span></div>
+        <div class="ore"><span class="nm">Ice Shard</span><span class="loc">Calottes polaires</span></div>
+      </div>
+      <div class="sub">🟠 Vénus</div>
+      <div class="ores">
+        <div class="ore"><span class="nm">Calorite</span><span class="loc">Ressource clé · fusée Tier 4</span><span class="badge">Combi Netherite</span></div>
+        <div class="ore"><span class="nm">Diamant</span><span class="loc">Cavernes</span></div>
+        <div class="ore"><span class="nm">Or</span><span class="loc">Cavernes</span></div>
+        <div class="ore"><span class="nm">Charbon</span><span class="loc">Cavernes</span></div>
+      </div>
+      <div class="sub">☿ Mercure &amp; ❄️ Glacio</div>
+      <div class="ores">
+        <div class="ore"><span class="nm">Minerais divers</span><span class="loc">Fer et autres selon la planète</span></div>
+      </div>
+      <div class="note"><b>Etrium</b> n'est pas listé : il se fabrique, il ne se mine pas.</div>
+    </section>
+
+    <section class="dim" id="twilight" style="--accent:#c084fc" data-name="Twilight Forest">
+      <div class="dim-head"><h2>Twilight Forest</h2><span class="tag">Dimension · Forêt</span></div>
+      <p class="dim-desc">Une forêt crépusculaire pleine de boss et de trésors.</p>
+      <div class="note">Pas de minerai « à la pioche » ici. Les matériaux du Twilight — <b>Ironwood, Knightmetal, Fiery, Steeleaf, Carminite</b> — s'obtiennent via les <b>structures, les boss et les arbres</b>.</div>
+    </section>
+
+    <section class="dim" id="deeperdarker" style="--accent:#1fb6a6" data-name="Deeper and Darker">
+      <div class="dim-head"><h2>Deeper and Darker</h2><span class="tag">Dimension · Sculk</span></div>
+      <p class="dim-desc">L'Otherside, depuis une Ancient City. Univers sculk, sombre et dangereux.</p>
+      <div class="note">Pas de minerai classique : on y récolte surtout des ressources <b>sculk</b> (Echo Shards, matériaux de l'Ancient City).</div>
+    </section>
+
+    <div class="empty hidden" id="empty">Aucun minerai ne correspond à ta recherche.</div>
+  </main>
+
+  <div class="note section-pad" style="--accent:var(--gold);margin-top:24px">
+    Les Y-levels et biomes sont les valeurs par défaut des mods en 1.19.2 ; ils peuvent varier selon la configuration du serveur.
+  </div>
+
+</div>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="links">
+      <a href="index.html">Accueil</a><a href="dimensions.html">Dimensions</a><a href="minerais.html">Minerais</a><a href="faq.html">FAQ</a><a href="regles.html">Règles</a><a href="https://discord.gg/F83tMfH5z" target="_blank" rel="noopener">Discord</a>
+    </div>
+    <div class="small">Dimensional Core Survival · Serveur Minecraft moddé non officiel — non affilié à Mojang / Microsoft.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
