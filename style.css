@@ -91,7 +91,7 @@ h1{font-family:var(--display);font-weight:700;font-size:clamp(32px,6vw,58px);lin
   margin:0 0 14px;letter-spacing:.5px;
   background:linear-gradient(180deg,#fff,#b9bee6);-webkit-background-clip:text;
   background-clip:text;color:transparent;}
-.hero-brand{margin:0 0 10px;}
+.hero-brand{margin:0 0 28px;background:none;-webkit-text-fill-color:initial;}
 .hero-logo{display:block;width:min(82%,360px);height:auto;margin:0 auto;
   filter:drop-shadow(0 14px 50px #a855f766);}
 h1.survival{font-size:clamp(24px,5vw,42px);letter-spacing:.4em;text-indent:.4em;
