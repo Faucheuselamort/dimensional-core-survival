@@ -46,7 +46,12 @@
       return;
     }
     var shown=0;
-    drops.forEach(function(d){var m=norm(d.textContent).indexOf(term)>-1;d.classList.toggle('hidden',!m);if(m)shown++;});
+    drops.forEach(function(d){
+      var nameEl=d.querySelector('.nm');
+      var hay=norm(nameEl?nameEl.textContent:d.textContent);
+      var m=hay.indexOf(term)>-1;
+      d.classList.toggle('hidden',!m);if(m)shown++;
+    });
     chips.forEach(function(c){var m=norm(c.textContent).indexOf(term)>-1;c.classList.toggle('hidden',!m);if(m)shown++;});
     cards.forEach(function(c){
       var vis=[].slice.call(c.querySelectorAll('details.bd,.chip')).some(function(e){return !e.classList.contains('hidden');});
