@@ -13,7 +13,7 @@
   --cyan:#22d3ee;   /* cyan du centre du vortex */
   --display:"Chakra Petch", system-ui, sans-serif;
   --body:"Inter", system-ui, -apple-system, sans-serif;
-  --maxw:1080px;
+  --maxw:1400px;
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
