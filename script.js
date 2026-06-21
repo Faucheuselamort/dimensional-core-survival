@@ -9,56 +9,51 @@
   }
 })();
 
-// ---- Recherche de minerais (page minerais uniquement) ----
+// ---- Recherche de minerais + navigation par dimension (page minerais) ----
 (function(){
+  var cards=[].slice.call(document.querySelectorAll('.boss-mod'));
+
+  // Navigation par dimension (pastilles) — uniquement si #portalnav existe
+  var nav=document.getElementById('portalnav');
+  if(nav){
+    cards.forEach(function(c){
+      if(!c.dataset.name) return;
+      var a=document.createElement('a');
+      var accent=getComputedStyle(c).getPropertyValue('--accent').trim();
+      a.href='#'+c.id; a.style.setProperty('--dot',accent);
+      a.innerHTML='<span class="dot"></span>'+c.dataset.name;
+      nav.appendChild(a);
+    });
+  }
+
   var q=document.getElementById('q');
-  if(!q) return;
+  if(!q) return; // pas de recherche sur les autres pages
   var countEl=document.getElementById('count');
   var emptyEl=document.getElementById('empty');
-  var sections=[].slice.call(document.querySelectorAll('section.dim'));
-  var ores=[].slice.call(document.querySelectorAll('.ore'));
+  var drops=[].slice.call(document.querySelectorAll('details.bd'));
   var chips=[].slice.call(document.querySelectorAll('.chip'));
-  var ccs=[].slice.call(document.querySelectorAll('details.cc'));
 
   function norm(t){return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
 
   function run(){
     var term=norm(q.value.trim());
     if(!term){
-      ores.forEach(function(o){o.classList.remove('hidden');});
+      drops.forEach(function(d){d.classList.remove('hidden');});
       chips.forEach(function(c){c.classList.remove('hidden');});
-      sections.forEach(function(s){s.classList.remove('hidden');});
-      ccs.forEach(function(d){d.classList.remove('hidden');});
+      cards.forEach(function(c){c.classList.remove('hidden');});
       if(emptyEl)emptyEl.classList.add('hidden');
       if(countEl)countEl.textContent='';
       return;
     }
     var shown=0;
-    ores.forEach(function(o){var m=norm(o.textContent).indexOf(term)>-1;o.classList.toggle('hidden',!m);if(m)shown++;});
+    drops.forEach(function(d){var m=norm(d.textContent).indexOf(term)>-1;d.classList.toggle('hidden',!m);if(m)shown++;});
     chips.forEach(function(c){var m=norm(c.textContent).indexOf(term)>-1;c.classList.toggle('hidden',!m);if(m)shown++;});
-    sections.forEach(function(s){
-      var vis=[].slice.call(s.querySelectorAll('.ore,.chip')).some(function(e){return !e.classList.contains('hidden');});
-      s.classList.toggle('hidden',!vis);
-    });
-    ccs.forEach(function(d){
-      var vis=[].slice.call(d.querySelectorAll('.chip')).some(function(e){return !e.classList.contains('hidden');});
-      d.classList.toggle('hidden',!vis);
-      if(vis)d.open=true;
+    cards.forEach(function(c){
+      var vis=[].slice.call(c.querySelectorAll('details.bd,.chip')).some(function(e){return !e.classList.contains('hidden');});
+      c.classList.toggle('hidden',!vis);
     });
     if(emptyEl)emptyEl.classList.toggle('hidden',shown>0);
-    if(countEl)countEl.textContent=shown+' minerai'+(shown>1?'s':'')+' trouvé'+(shown>1?'s':'');
+    if(countEl)countEl.textContent=shown+' résultat'+(shown>1?'s':'');
   }
   q.addEventListener('input',run);
-
-  // Construit la navigation par portails depuis les sections
-  var nav=document.getElementById('portalnav');
-  if(nav){
-    sections.forEach(function(s){
-      var a=document.createElement('a');
-      var accent=getComputedStyle(s).getPropertyValue('--accent').trim();
-      a.href='#'+s.id;a.style.setProperty('--dot',accent);
-      a.innerHTML='<span class="dot"></span>'+(s.dataset.name||s.id);
-      nav.appendChild(a);
-    });
-  }
 })();
