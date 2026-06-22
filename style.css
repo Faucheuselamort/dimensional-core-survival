@@ -270,7 +270,7 @@ details.bd[open]>summary .chev{transform:rotate(90deg);}
 .bd-photo img{width:100%;height:100%;object-fit:cover;display:block;}
 .bd-photo.empty{display:flex;align-items:center;justify-content:center;}
 .bd-photo.empty::after{content:"📷";font-size:30px;opacity:.35;}
-.bd-how{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;}
+.bd-how{font-size:13.5px;color:var(--muted);margin:0;line-height:1.65;max-width:780px;}
 .bd-how b{color:var(--txt);}
 /* minerais : 2 images + infos */
 .ore-imgs{display:flex;gap:10px;flex:none;}
